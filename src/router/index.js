@@ -1,14 +1,21 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import BoardView from "../views/BoardView";
+import RecipeDetail from "../views/RecipeDetail.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "board-view",
+    component: BoardView
+  },
+  {
+    path:"/recipe/:id",
+    name:"recipe-detail",
+    component:RecipeDetail,
+    props:true
   },
   {
     path: "/about",
